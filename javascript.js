@@ -14,7 +14,7 @@ function playRound(playerSelection, computerSelection) {
 
   if (playerSelection == 'rock') {
     if (computerSelection == 'scissors') {
-      console.log("The player won! Rock beats scissors!");
+      console.log("The player won! Rock beats scissors!"); //ff
       winner = 'player';
     } else if (computerSelection == 'paper') {
       console.log("The computer won! Paper beats rock");

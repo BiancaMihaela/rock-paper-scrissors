@@ -57,28 +57,32 @@ var computerScore = 0;
 
 
 
-function removeTransition(e) {
-  if (e.propertyName !== 'transform') return;
-  console.log(e.propertyName); 
-  e.classList.remove('playing');
-}
+  function removeTransition(e) {
+    if (e.propertyName === 'transform') {
+      e.target.classList.remove('playing');
+    }
+  }
 
-//const element = document.querySelector('.elements');
-const keys = Array.from(document.querySelectorAll('.elements'));
-keys.forEach(elements => elements.addEventListener('transitionend', removeTransition));
+
+const rock= document.getElementById('rock');
+ const keys = document.querySelectorAll('.key');
+keys.forEach((key) => key.addEventListener('transitionend', removeTransition));
 
 function game() {
 
   console.log("Player Score:", playerScore);
   console.log("Computer Score:", computerScore);
-  const rock= document.getElementById('rock');
+ 
   rock.addEventListener('click', function() {
     rock.classList.add('playing');
     // Access the clicked element using event.target
     const playerSelection = 'rock'; // Set the player's choice
     const computerSelection = getComputerChoice();
     const result = playRound(playerSelection, computerSelection);
-  
+
+    
+
+
     if (result === 'player') {
       playerScore++;
     } else if (result === 'computer') {
@@ -86,11 +90,14 @@ function game() {
     }
     console.log("Player Score:", playerScore);
     console.log("Computer Score:", computerScore);
+   
   });
 
-
-  
+ 
   
 }
 
+
 game();
+
+

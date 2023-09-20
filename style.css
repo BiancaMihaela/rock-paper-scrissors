@@ -14,17 +14,18 @@
 
 .playing {
     transform: scale(1.1);
+   
     border-color: #242322;
     box-shadow: 0 0 1rem #080805;
   }
 
-  .elements {
+  .key {
     border: .4rem solid black;
     border-radius: .5rem;
     margin: .3rem;
     padding: 1rem 1rem;
     width: 6.5rem;
     text-align: center;
-    transition: all .07s ease; /*??*/
+    transition: all .5s ease; /*??*/
     
   }  

@@ -26,6 +26,54 @@
     padding: 1rem 1rem;
     width: 6.5rem;
     text-align: center;
-    transition: all .5s ease; /*??*/
-    
+    transition: all .09s ease; /*??*/
+    display: inline-block;
   }  
+
+  .title{
+    text-align: center;
+    padding: 20px;
+  }
+
+  .elements{
+    text-align: center; /* Center content horizontally */
+    background-color: #eaa7a7; /* Just for visibility */
+    padding: 5px; /* Add some padding for visibility */
+  }
+
+  #textRedoRound{
+    padding: 20px;
+    font-size: 30px;
+    border-bottom: none;
+  }
+
+  .choice {
+    background-color: #eaa7a7; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #555555;
+  }
+
+  .choice:hover {
+    background-color: #555555;
+    color: white;
+  }
+
+  .playerScoreContainer{
+    display: inline;
+    color: white;
+    
+  }
+
+  .childScore{
+  
+    display: inline-block;
+  }

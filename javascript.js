@@ -65,6 +65,10 @@ var computerScore = 0;
 
 
 const rock= document.getElementById('rock');
+const paper=document.getElementById('paper'); 
+const scissors=document.getElementById('scissors'); 
+
+
  const keys = document.querySelectorAll('.key');
 keys.forEach((key) => key.addEventListener('transitionend', removeTransition));
 
@@ -90,14 +94,81 @@ function game() {
     }
     console.log("Player Score:", playerScore);
     console.log("Computer Score:", computerScore);
+    
+    var pScore=document.getElementById("htmlPlayerScore");
+    pScore.innerHTML=playerScore; 
+
+    var cScore=document.getElementById("htmlComputerScore");
+    cScore.innerHTML=computerScore; 
+  });
+
+
+  scissors.addEventListener('click', function() {
+    scissors.classList.add('playing');
+    // Access the clicked element using event.target
+    const playerSelection = 'scissors'; // Set the player's choice
+    const computerSelection = getComputerChoice();
+    const result = playRound(playerSelection, computerSelection);
+
+    
+
+
+    if (result === 'player') {
+      playerScore++;
+    } else if (result === 'computer') {
+      computerScore++;
+    }
+    console.log("Player Score:", playerScore);
+    console.log("Computer Score:", computerScore);
    
+    var pScore=document.getElementById("htmlPlayerScore");
+    pScore.innerHTML=playerScore; 
+
+    var cScore=document.getElementById("htmlComputerScore");
+    cScore.innerHTML=computerScore; 
   });
 
  
-  
+  paper.addEventListener('click', function() {
+    paper.classList.add('playing');
+    // Access the clicked element using event.target
+    const playerSelection = 'paper'; // Set the player's choice
+    const computerSelection = getComputerChoice();
+    const result = playRound(playerSelection, computerSelection);
+
+    
+
+
+    if (result === 'player') {
+      playerScore++;
+    } else if (result === 'computer') {
+      computerScore++;
+    }
+    console.log("Player Score:", playerScore);
+    console.log("Computer Score:", computerScore);
+   
+    var pScore=document.getElementById("htmlPlayerScore");
+    pScore.innerHTML=playerScore; 
+
+    var cScore=document.getElementById("htmlComputerScore");
+    cScore.innerHTML=computerScore; 
+    
+  });
+
+    
+ 
+}
+
+function tournament() {
+
+if((playerScore<6) || (computerScore <6)){
+  game();
+}
+else{
+  console.log("game finished >>>>>>>>>>>>>>>>>>>>>>>>>");
+}
+
 }
 
 
-game();
-
-
+tournament();

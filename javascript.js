@@ -77,6 +77,7 @@ var statusScore=null;
 const rock= document.getElementById('rock');
 const paper=document.getElementById('paper'); 
 const scissors=document.getElementById('scissors'); 
+const choice=document.getElementById('choice');  
 
 
  const keys = document.querySelectorAll('.key');
@@ -120,6 +121,11 @@ function game() {
 
     if((playerScore>4) || (computerScore >4)){
      jReplayMessage.classList.remove('aftermath'); 
+     
+     rock.classList.remove('playing');
+     rock.classList.add('aftermath'); 
+      paper.classList.add('aftermath'); 
+      scissors.classList.add('aftermath'); 
     }
 
   });
@@ -154,6 +160,9 @@ function game() {
 
     if((playerScore>4) || (computerScore >4)){
       jReplayMessage.classList.remove('aftermath'); 
+      rock.classList.add('aftermath'); 
+      paper.classList.add('aftermath'); 
+      scissors.classList.add('aftermath'); 
      }
   });
 
@@ -190,14 +199,16 @@ function game() {
     ///test
     if((playerScore>4) || (computerScore >4)){
       jReplayMessage.classList.remove('aftermath'); 
+      rock.classList.add('aftermath'); 
+      paper.classList.add('aftermath'); 
+      scissors.classList.add('aftermath'); 
      }
       
-    
-
-
   });
 
-    
+    choice.addEventListener('click', function(){
+      window.location.reload(true);
+    });
  
 }
 

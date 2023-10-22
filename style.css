@@ -9,7 +9,7 @@
 .fa-scissors{
     font-size: 100px;
 }
-
+* {background-color: #eba6a6}
 
 
 .playing {
@@ -33,6 +33,7 @@
   .title{
     text-align: center;
     padding: 20px;
+    background-color: #eaa7a7; 
   }
 
   .elements{
@@ -47,8 +48,8 @@
     border-bottom: none;
   }
 
-  .choice {
-    background-color: #eaa7a7; /* Green */
+  #choice {
+    background-color: #eba6a6; /* Green */
     border: none;
     color: white;
     padding: 16px 32px;
@@ -62,14 +63,14 @@
     border: 2px solid #555555;
   }
 
-  .choice:hover {
+  #choice:hover {
     background-color: #555555;
     color: white;
   }
 
   .playerScoreContainer{
     display: inline;
-    color: white;
+    color: rgb(0, 0, 0);
     
   }
 
